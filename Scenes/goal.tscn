@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://b6o5oi8h61734"]
+
+[ext_resource type="Script" uid="uid://c18ld4xoafbtr" path="res://Scripts/goal.gd" id="1_0qle8"]
+[ext_resource type="Texture2D" uid="uid://lhibfmumgtbg" path="res://Sprites/Green.webp" id="1_6k3qi"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0qle8"]
+albedo_texture = ExtResource("1_6k3qi")
+
+[sub_resource type="BoxMesh" id="BoxMesh_7sh37"]
+size = Vector3(5, 1, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6k3qi"]
+size = Vector3(5.014572, 1, 4.9522705)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0qle8"]
+size = Vector3(4.9973145, 1.2401733, 4.9612427)
+
+[node name="goal" type="StaticBody3D" unique_id=1548128697]
+script = ExtResource("1_0qle8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=816544868]
+material_override = SubResource("StandardMaterial3D_0qle8")
+mesh = SubResource("BoxMesh_7sh37")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1760435528]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0022659302, 0, 0.030944824)
+shape = SubResource("BoxShape3D_6k3qi")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=455225843]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=556083834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.003540039, -0.0010681152, -0.006134033)
+shape = SubResource("BoxShape3D_0qle8")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]

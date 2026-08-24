@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://b7m7bicqoq1jq"]
+
+[ext_resource type="Texture2D" uid="uid://bhcukmv8uvhhp" path="res://Sprites/texture-stone-slabs-platform-station-textures-90036389.webp" id="1_r2uek"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2y55t"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2y55t"]
+size = Vector3(4.907585, 1, 9.874329)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lt8jv"]
+albedo_texture = ExtResource("1_r2uek")
+
+[sub_resource type="BoxMesh" id="BoxMesh_r2uek"]
+size = Vector3(5, 1, 10)
+
+[node name="really_long_platform" type="StaticBody3D" unique_id=1067231133]
+physics_material_override = SubResource("PhysicsMaterial_2y55t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1826328642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.022922516, 0, 0.058807373)
+shape = SubResource("BoxShape3D_2y55t")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=823638993]
+material_override = SubResource("StandardMaterial3D_lt8jv")
+mesh = SubResource("BoxMesh_r2uek")

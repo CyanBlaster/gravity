@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b43b0asuyfudx"]
+
+[ext_resource type="Texture2D" uid="uid://bhcukmv8uvhhp" path="res://Sprites/texture-stone-slabs-platform-station-textures-90036389.webp" id="1_17ay1"]
+[ext_resource type="PackedScene" uid="uid://2tph6nb1c5mk" path="res://Model/spike_trap_01.glb" id="2_5hrlt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gym2g"]
+albedo_texture = ExtResource("1_17ay1")
+
+[sub_resource type="BoxMesh" id="BoxMesh_y50to"]
+size = Vector3(5, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r21sw"]
+size = Vector3(5, 1.0115967, 3)
+
+[node name="spikey_platform_below" type="StaticBody3D" unique_id=1602251316]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=17302008]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0054543, -0.0002105236, 0.9977737)
+material_override = SubResource("StandardMaterial3D_gym2g")
+mesh = SubResource("BoxMesh_y50to")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=307364591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.00579834, 1)
+shape = SubResource("BoxShape3D_r21sw")
+
+[node name="Spike" parent="." unique_id=250086667 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, -0.63106924, -0.42704386, 0.35416913)
+
+[node name="Spike2" parent="." unique_id=1529178704 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, -0.63106924, -0.42704386, 1.4384687)
+
+[node name="Spike3" parent="." unique_id=109183547 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, 1.2035098, -0.42704386, 1.4384687)
+
+[node name="Spike4" parent="." unique_id=1395077087 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, 1.2035098, -0.42704386, 0.3746221)
+
+[node name="Spike5" parent="." unique_id=1837584599 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, 2.2749345, -0.42704386, 0.3746221)
+
+[node name="Spike6" parent="." unique_id=667341065 instance=ExtResource("2_5hrlt")]
+transform = Transform3D(-3, 2.6226832e-07, 0, -2.6226832e-07, -3, 0, 0, 0, 3, 2.2749345, -0.42704386, 1.4360957)
