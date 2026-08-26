@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dtxpnrga05rvg"]
+
+[ext_resource type="Texture2D" uid="uid://dat64b2k7rwka" path="res://Sprites/seamless-natural-oak-wood-floor-mat-texture-bacodrp-for-baby-photography-q-0587.jpg" id="1_ekukb"]
+[ext_resource type="Texture2D" uid="uid://bgsb6agssi0ka" path="res://Sprites/download (1).webp" id="2_ou6wt"]
+[ext_resource type="PackedScene" uid="uid://chncc3xcsrugs" path="res://Model/Bed_gltf.glb" id="3_t8iqq"]
+[ext_resource type="AudioStream" uid="uid://ya2dtyffy17" path="res://Sounds/12 Ending.mp3" id="4_t8iqq"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="5_152uk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bp1n7"]
+albedo_texture = ExtResource("1_ekukb")
+
+[sub_resource type="BoxMesh" id="BoxMesh_t43du"]
+size = Vector3(10, 1, 19)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_51rdc"]
+albedo_texture = ExtResource("2_ou6wt")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_my7nd"]
+albedo_texture = ExtResource("2_ou6wt")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gfq8t"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ekukb"]
+
+[sub_resource type="Sky" id="Sky_t7iv1"]
+sky_material = SubResource("ProceduralSkyMaterial_ekukb")
+
+[sub_resource type="Environment" id="Environment_ou6wt"]
+background_mode = 2
+sky = SubResource("Sky_t7iv1")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[node name="The End" type="Node3D" unique_id=1966430115]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1775348267]
+material_override = SubResource("StandardMaterial3D_bp1n7")
+mesh = SubResource("BoxMesh_t43du")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=727369777]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 4.503703, -5.4634905)
+material_override = SubResource("StandardMaterial3D_51rdc")
+mesh = SubResource("BoxMesh_t43du")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=1806817521]
+transform = Transform3D(-4.371139e-08, -1, 0, -4.371139e-08, 1.9106855e-15, -1, 1, -4.371139e-08, -4.371139e-08, -5.491371, 4.5291796, -0.035923958)
+material_override = SubResource("StandardMaterial3D_my7nd")
+mesh = SubResource("BoxMesh_t43du")
+
+[node name="Bed_gltf" parent="." unique_id=571196242 instance=ExtResource("3_t8iqq")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.8945568, 0, -0.7699866)
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=704923558]
+transform = Transform3D(3, 0, 0, 0, -1.3113416e-07, -3, 0, 3, -1.3113416e-07, 0.8883314, 1.5922015, -0.88068867)
+mesh = SubResource("CapsuleMesh_gfq8t")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=2013132359]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.9854305, 3.2143571, 5.046941)
+mesh = SubResource("CapsuleMesh_gfq8t")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1616075761]
+transform = Transform3D(0.7071068, 0, 0.7071068, 0, 1, 0, -0.7071068, 0, 0.7071068, 3.3045387, 4.0064187, 3.6842794)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=691163087]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, -2.4367013, 5.7480526, -1.4743228)
+text = "The End"
+font_size = 144
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=1063426304]
+transform = Transform3D(0.70710677, 0, 0.70710677, 0, 1, 0, -0.70710677, 0, 0.70710677, 1.2091167, 4.3599396, -1.4743228)
+text = "ZZZZZZZ"
+font_size = 144
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1652333560]
+environment = SubResource("Environment_ou6wt")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1992300123]
+stream = ExtResource("4_t8iqq")
+autoplay = true
+script = ExtResource("5_152uk")

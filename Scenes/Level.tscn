@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://biun336wrrm8m" path="res://Sounds/231. Day Out (Instrumental).mp3" id="6_or7tv"]
 [ext_resource type="PackedScene" uid="uid://b7m7bicqoq1jq" path="res://Scenes/really_long_platform.tscn" id="6_tj5wv"]
 [ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="7_133si"]
+[ext_resource type="PackedScene" uid="uid://cnk7dpioymi0e" path="res://Scenes/spiky_platform_above.tscn" id="7_ienac"]
 [ext_resource type="PackedScene" uid="uid://b43b0asuyfudx" path="res://Scenes/spikey_platform_below.tscn" id="8_5rrr5"]
 [ext_resource type="PackedScene" uid="uid://dysyi8k8wi6cv" path="res://Scenes/checkpoint.tscn" id="8_or7tv"]
 
@@ -107,7 +108,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14221525, 6.077935, -8.8422
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.7316144, 3.7885618)
 
 [node name="Label3D" type="Label3D" parent="." unique_id=417680786]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.6078095, -3.5295148)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.6078095, 2.5855699)
 text = "Welcome to the Gravity Changing Game!
 
 Use Arrow Keys or WASD to Move.
@@ -117,3 +118,34 @@ when on the ground with G!
 
 Okay Have Fun!!! :D"
 font_size = 132
+
+[node name="Label3D2" type="Label3D" parent="." unique_id=871325736]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, -4.1334805, 10.113935)
+text = "This is a checkpoint!
+Stand on it to save your ->
+spot on a hard level!"
+font_size = 96
+
+[node name="Label3D3" type="Label3D" parent="." unique_id=2076461781]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3320313, -6.1743064, -30.250792)
+text = "That is a spike trap. Stand on the wrong end o f this platform is a death sentence!
+||
+\\/"
+font_size = 96
+
+[node name="Label3D4" type="Label3D" parent="." unique_id=1370939717]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3320313, -2.5221007, -58.659657)
+text = "/\\
+||
+And that's the goal. Touch it in any means
+possible to beat the level(In game, of course.)!
+Good luck!"
+font_size = 96
+
+[node name="Label3D5" type="Label3D" parent="." unique_id=30240133]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 1.3320313, 1.104279, -14.404259)
+text = "Use M to Toggle the Music."
+font_size = 96
+
+[node name="Spiky_Platform_Above" parent="." unique_id=1161369589 instance=ExtResource("7_ienac")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.6247, -31.603033)
