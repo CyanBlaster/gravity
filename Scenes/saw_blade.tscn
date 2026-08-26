@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cgv52v17sh6q6"]
+
+[ext_resource type="Script" uid="uid://bprk77evsc6ue" path="res://Scripts/saw_blade.gd" id="1_e40x2"]
+[ext_resource type="PackedScene" uid="uid://dfy7n76ptbj1k" path="res://Model/circular_saw_blade.glb" id="1_vx7bo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vx7bo"]
+height = 0.13192749
+
+[node name="Saw Blade" type="CharacterBody3D" unique_id=81490354]
+script = ExtResource("1_e40x2")
+
+[node name="Sketchfab_Scene" parent="." unique_id=78296924 instance=ExtResource("1_vx7bo")]
+transform = Transform3D(10, 0, 0, 0, 9.781476, -2.079117, 0, 2.079117, 9.781476, 1.5598178, 0, 0)
+
+[node name="saw" type="Area3D" parent="." unique_id=442689765]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="saw" unique_id=581770224]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2.0393e-08, -0.0055356026)
+shape = SubResource("CylinderShape3D_vx7bo")

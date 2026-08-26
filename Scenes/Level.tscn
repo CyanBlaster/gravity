@@ -5,9 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://b6o5oi8h61734" path="res://Scenes/goal.tscn" id="3_8rbpu"]
 [ext_resource type="Texture2D" uid="uid://cspm410llov04" path="res://Sprites/arrow.png" id="4_fuudy"]
 [ext_resource type="PackedScene" uid="uid://byminsqnjbirg" path="res://Scenes/long_platform.tscn" id="5_xylue"]
+[ext_resource type="AudioStream" uid="uid://biun336wrrm8m" path="res://Sounds/231. Day Out (Instrumental).mp3" id="6_or7tv"]
 [ext_resource type="PackedScene" uid="uid://b7m7bicqoq1jq" path="res://Scenes/really_long_platform.tscn" id="6_tj5wv"]
-[ext_resource type="PackedScene" uid="uid://cnk7dpioymi0e" path="res://Scenes/spiky_platform_above.tscn" id="7_ienac"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="7_133si"]
 [ext_resource type="PackedScene" uid="uid://b43b0asuyfudx" path="res://Scenes/spikey_platform_below.tscn" id="8_5rrr5"]
+[ext_resource type="PackedScene" uid="uid://dysyi8k8wi6cv" path="res://Scenes/checkpoint.tscn" id="8_or7tv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bexhn"]
 
@@ -24,7 +26,7 @@ reflected_light_source = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0332656, 0, 0)
 
 [node name="player" parent="." unique_id=90765665 instance=ExtResource("1_vsvp5")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0784023, -4.7683716e-07, 0.3459034)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0784023, -2.381864, 0.3459034)
 
 [node name="platform" parent="." unique_id=667036720 instance=ExtResource("2_8rbpu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.1604443, -10.466501)
@@ -88,6 +90,9 @@ texture = ExtResource("4_fuudy")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.83797693, -4.057689, -1.0196285)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=21561020]
+stream = ExtResource("6_or7tv")
+autoplay = true
+script = ExtResource("7_133si")
 
 [node name="really_long_platform" parent="." unique_id=1067231133 instance=ExtResource("6_tj5wv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3103023, 6.4030757, -12.739782)
@@ -95,8 +100,20 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3103023, 6.4030757, -12.739
 [node name="really_long_platform2" parent="." unique_id=1670229370 instance=ExtResource("6_tj5wv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3103023, 6.4030757, -3.0058818)
 
-[node name="Spiky_Platform_Above" parent="." unique_id=270130790 instance=ExtResource("7_ienac")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.086582184, -4.0536327, 1.986244)
-
 [node name="spikey_platform_below" parent="." unique_id=1602251316 instance=ExtResource("8_5rrr5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14221525, 6.077935, -8.842207)
+
+[node name="checkpoint" parent="." unique_id=1230661618 instance=ExtResource("8_or7tv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.7316144, 3.7885618)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=417680786]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.6078095, -3.5295148)
+text = "Welcome to the Gravity Changing Game!
+
+Use Arrow Keys or WASD to Move.
+Use your Mouse to move your camera.
+And most importantly, flip your gravity
+when on the ground with G!
+
+Okay Have Fun!!! :D"
+font_size = 132

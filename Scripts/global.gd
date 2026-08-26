@@ -8,5 +8,11 @@ func _process(_delta: float) -> void:
 			get_tree().change_scene_to_file("res://Scenes/level_2.tscn")
 		elif(level == 3):
 			get_tree().change_scene_to_file("res://Scenes/level_3.tscn")
+		elif(level == 4):
+			get_tree().change_scene_to_file("res://Scenes/level_4.tscn")
+		elif(level == 5):
+			get_tree().change_scene_to_file("res://Scenes/level_5.tscn")
+		elif(level == 6):
+			get_tree().change_scene_to_file("res://Scenes/level_6.tscn")
 		else:
 			get_tree().change_scene_to_file("res://Scenes/Level.tscn")

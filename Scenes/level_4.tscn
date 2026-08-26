@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://cfvhc7ebt1p7h"]
+
+[ext_resource type="PackedScene" uid="uid://dq6dxa3ojd61q" path="res://Scenes/player.tscn" id="1_wi344"]
+[ext_resource type="PackedScene" uid="uid://b7m7bicqoq1jq" path="res://Scenes/really_long_platform.tscn" id="2_f6i20"]
+[ext_resource type="PackedScene" uid="uid://b6o5oi8h61734" path="res://Scenes/goal.tscn" id="3_dvrgg"]
+[ext_resource type="PackedScene" uid="uid://b43b0asuyfudx" path="res://Scenes/spikey_platform_below.tscn" id="4_wk15n"]
+[ext_resource type="AudioStream" uid="uid://f3rvgtaekupo" path="res://Sounds/Undertale_OST_-_Ghostfight_(mp3.pm).mp3" id="5_f6i20"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="6_dvrgg"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_wi344"]
+
+[sub_resource type="Sky" id="Sky_dvrgg"]
+sky_material = SubResource("ProceduralSkyMaterial_wi344")
+
+[sub_resource type="Environment" id="Environment_f6i20"]
+background_mode = 2
+sky = SubResource("Sky_dvrgg")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_dvrgg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wk15n"]
+size = Vector3(1, 5.182312, 10.039703)
+
+[node name="level_4" type="Node3D" unique_id=1432524829]
+
+[node name="player" parent="." unique_id=90765665 instance=ExtResource("1_wi344")]
+
+[node name="really_long_platform" parent="." unique_id=1067231133 instance=ExtResource("2_f6i20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="goal" parent="." unique_id=1548128697 instance=ExtResource("3_dvrgg")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 279.79266, 0)
+
+[node name="spikey_platform_below" parent="." unique_id=1602251316 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 17.522264, 1.8338375)
+
+[node name="spikey_platform_below2" parent="." unique_id=1508920785 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.578102, 1.8338375)
+
+[node name="spikey_platform_below9" parent="." unique_id=411700947 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.578102, -5.0015545)
+
+[node name="spikey_platform_below3" parent="." unique_id=1263450974 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 67.48537, -0.8074312)
+
+[node name="spikey_platform_below4" parent="." unique_id=158268062 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 92.50676, 1.338357)
+
+[node name="spikey_platform_below5" parent="." unique_id=1770776662 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 122.447464, -4.680915)
+
+[node name="spikey_platform_below6" parent="." unique_id=1720385132 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 162.43796, -3.1092482)
+
+[node name="spikey_platform_below10" parent="." unique_id=70637503 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 162.43796, 0.006711006)
+
+[node name="spikey_platform_below7" parent="." unique_id=1187056920 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 199.52298, -3.1092482)
+
+[node name="spikey_platform_below8" parent="." unique_id=202239079 instance=ExtResource("4_wk15n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.16072083, 237.87695, 0.291749)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1094870704]
+environment = SubResource("Environment_f6i20")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=655724687]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 1.8807864, 0)
+text = "Only way to go is up!
+
+Be careful!"
+font_size = 132
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2141073034]
+stream = ExtResource("5_f6i20")
+autoplay = true
+script = ExtResource("6_dvrgg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1800942260]
+physics_material_override = SubResource("PhysicsMaterial_dvrgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1595865534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0393345, 0.07727623, -0.03526306)
+shape = SubResource("BoxShape3D_wk15n")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=74065320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.053376, 0, 0)
+physics_material_override = SubResource("PhysicsMaterial_dvrgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" unique_id=919096099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0393345, 0.07727623, -0.03526306)
+shape = SubResource("BoxShape3D_wk15n")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="." unique_id=290261870]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.2638731, 0, 2.4484563)
+physics_material_override = SubResource("PhysicsMaterial_dvrgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3" unique_id=1854059925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0393345, 0.07727623, -0.03526306)
+shape = SubResource("BoxShape3D_wk15n")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="." unique_id=1529346933]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0.2638731, 0, -8.497858)
+physics_material_override = SubResource("PhysicsMaterial_dvrgg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D4" unique_id=136620641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0393345, 0.07727623, -0.03526306)
+shape = SubResource("BoxShape3D_wk15n")

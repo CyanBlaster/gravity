@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bthc0t1gjdrhw"]
+
+[ext_resource type="Script" uid="uid://c07323pbeg0id" path="res://Scripts/title_screen.gd" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://dwy0ml6sv24sc" path="res://Sprites/pixil-frame-0 (39).png" id="2_4gxqj"]
+[ext_resource type="AudioStream" uid="uid://btl52ynpkqylq" path="res://Sounds/Red Like Roses (Red Trailer) (feat. Casey Lee Williams).mp3" id="3_4gxqj"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="4_twnyg"]
+
+[node name="Title Screen" type="Node2D" unique_id=471308433]
+script = ExtResource("1_p3fck")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1697242757]
+position = Vector2(323.5, 325.5)
+scale = Vector2(6.5499997, 6.5499997)
+texture = ExtResource("2_4gxqj")
+
+[node name="Label" type="Label" parent="." unique_id=704833237]
+offset_left = 651.0
+offset_top = 13.0
+offset_right = 1143.0
+offset_bottom = 283.0
+theme_override_font_sizes/font_size = 64
+text = "Defying Gravity.
+
+Literally."
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="." unique_id=985267206]
+offset_left = 812.0
+offset_top = 400.0
+offset_right = 969.5849
+offset_bottom = 516.0
+theme_override_font_sizes/font_size = 32
+text = "Play"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1349379130]
+stream = ExtResource("3_4gxqj")
+autoplay = true
+script = ExtResource("4_twnyg")
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

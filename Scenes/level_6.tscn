@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://bvpoqnrn14ahy"]
+
+[ext_resource type="PackedScene" uid="uid://dq6dxa3ojd61q" path="res://Scenes/player.tscn" id="1_67u3v"]
+[ext_resource type="PackedScene" uid="uid://b43b0asuyfudx" path="res://Scenes/spikey_platform_below.tscn" id="2_helb0"]
+[ext_resource type="PackedScene" uid="uid://cnk7dpioymi0e" path="res://Scenes/spiky_platform_above.tscn" id="3_gqpvc"]
+[ext_resource type="PackedScene" uid="uid://c0bxklyaf38ax" path="res://Scenes/platform.tscn" id="4_rkygx"]
+[ext_resource type="PackedScene" uid="uid://b7m7bicqoq1jq" path="res://Scenes/really_long_platform.tscn" id="5_helb0"]
+[ext_resource type="PackedScene" uid="uid://cgv52v17sh6q6" path="res://Scenes/saw_blade.tscn" id="6_gqpvc"]
+[ext_resource type="PackedScene" uid="uid://b6o5oi8h61734" path="res://Scenes/goal.tscn" id="7_rkygx"]
+[ext_resource type="AudioStream" uid="uid://byo4vjf147p2x" path="res://Sounds/36. Shootin n' Lootin.mp3" id="8_546p8"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="8_b33os"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gqpvc"]
+
+[sub_resource type="Sky" id="Sky_t7iv1"]
+sky_material = SubResource("ProceduralSkyMaterial_gqpvc")
+
+[sub_resource type="Environment" id="Environment_rkygx"]
+background_mode = 2
+sky = SubResource("Sky_t7iv1")
+ambient_light_source = 3
+reflected_light_source = 2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gqpvc"]
+size = Vector3(71.84387, 20.802979, 2.0461426)
+
+[node name="level_6" type="Node3D" unique_id=1326728936]
+
+[node name="player" parent="." unique_id=90765665 instance=ExtResource("1_67u3v")]
+
+[node name="spikey_platform_below" parent="." unique_id=1602251316 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 9.787542, -1)
+
+[node name="spikey_platform_below2" parent="." unique_id=1815780796 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.83846, 9.787542, -1)
+
+[node name="spikey_platform_below4" parent="." unique_id=1819524292 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.733855, 9.787542, -1)
+
+[node name="spikey_platform_below5" parent="." unique_id=427834958 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.552733, 9.787542, -1)
+
+[node name="spikey_platform_below6" parent="." unique_id=2068815419 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.534555, 9.787542, -1)
+
+[node name="spikey_platform_below7" parent="." unique_id=1976907317 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.21174, 9.787542, -1)
+
+[node name="spikey_platform_below3" parent="." unique_id=1267394739 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.6629353, 9.787542, -1)
+
+[node name="Spiky_Platform_Above" parent="." unique_id=1161369589 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above2" parent="." unique_id=612639979 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.870223, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above4" parent="." unique_id=610285143 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.911176, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above5" parent="." unique_id=1096814329 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.884707, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above6" parent="." unique_id=1187953263 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.847511, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above7" parent="." unique_id=1943494384 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.790905, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above3" parent="." unique_id=380751008 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.944293, -7.8016305, 0)
+
+[node name="platform" parent="." unique_id=667036720 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.6062317, 0)
+
+[node name="platform6" parent="." unique_id=263849434 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.678629, -3.6062317, 0)
+
+[node name="platform9" parent="." unique_id=204505655 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.982878, -3.6062317, 0)
+
+[node name="platform4" parent="." unique_id=1855596035 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.3667936, 0)
+
+[node name="platform5" parent="." unique_id=696652023 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.188503, 5.3667936, 0)
+
+[node name="platform8" parent="." unique_id=1915610565 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.030613, 5.3667936, 0)
+
+[node name="platform2" parent="." unique_id=1609240935 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.110325, 1.0193815, 0)
+
+[node name="platform7" parent="." unique_id=1021376506 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.957964, 1.0193815, 0)
+
+[node name="platform10" parent="." unique_id=1838583437 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.500856, 1.0193815, 0)
+
+[node name="platform3" parent="." unique_id=1743898788 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.721424, 1.0193815, 0)
+
+[node name="really_long_platform" parent="." unique_id=1067231133 instance=ExtResource("5_helb0")]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -6.6718087, 5.2709484, 0.8440447)
+
+[node name="really_long_platform2" parent="." unique_id=1064106250 instance=ExtResource("5_helb0")]
+transform = Transform3D(-4.371139e-08, 1, -4.371139e-08, 0, -4.371139e-08, -1, -1, -4.371139e-08, 1.9106855e-15, -6.6718087, -3.4319925, 0.78402615)
+
+[node name="Saw Blade" parent="." unique_id=1144227432 instance=ExtResource("6_gqpvc")]
+transform = Transform3D(4.499938, 0, -0.023640376, 0, 4.5, 0, 0.023640376, 0, 4.499938, 11.932884, 2.997408, 0)
+
+[node name="Saw Blade4" parent="." unique_id=81490354 instance=ExtResource("6_gqpvc")]
+transform = Transform3D(4.499938, 0, -0.023640376, 0, 4.5, 0, 0.023640376, 0, 4.499938, 40.318565, 2.997408, 0)
+
+[node name="Saw Blade3" parent="." unique_id=1126545488 instance=ExtResource("6_gqpvc")]
+transform = Transform3D(4.499938, 0, -0.023640376, 0, 4.5, 0, 0.023640376, 0, 4.499938, 27.783497, -1.391902, 0)
+
+[node name="spikey_platform_below8" parent="." unique_id=1667537516 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.369335, 9.787542, -1)
+
+[node name="spikey_platform_below9" parent="." unique_id=1910726019 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.207794, 9.787542, -1)
+
+[node name="spikey_platform_below10" parent="." unique_id=1512501555 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.10319, 9.787542, -1)
+
+[node name="spikey_platform_below11" parent="." unique_id=1314417329 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.92207, 9.787542, -1)
+
+[node name="spikey_platform_below12" parent="." unique_id=1162787622 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 52.903893, 9.787542, -1)
+
+[node name="spikey_platform_below13" parent="." unique_id=1370435264 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57.581078, 9.787542, -1)
+
+[node name="spikey_platform_below15" parent="." unique_id=1723926253 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.017044, 9.787542, -1)
+
+[node name="spikey_platform_below14" parent="." unique_id=878671610 instance=ExtResource("2_helb0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.7064, 9.787542, -1)
+
+[node name="Spiky_Platform_Above8" parent="." unique_id=1790324259 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.369335, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above9" parent="." unique_id=527550508 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.23956, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above10" parent="." unique_id=10948043 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.28051, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above11" parent="." unique_id=915674773 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48.254044, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above12" parent="." unique_id=2029699147 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 53.216846, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above13" parent="." unique_id=2086773979 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.16024, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above15" parent="." unique_id=591376520 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.805794, -7.8016305, 0)
+
+[node name="Spiky_Platform_Above14" parent="." unique_id=1094532137 instance=ExtResource("3_gqpvc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.425041, -7.8016305, 0)
+
+[node name="platform11" parent="." unique_id=899681076 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.369335, -3.6062317, 0)
+
+[node name="platform12" parent="." unique_id=730746109 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44.047966, -3.6062317, 0)
+
+[node name="platform13" parent="." unique_id=241207939 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.35221, -3.6062317, 0)
+
+[node name="platform14" parent="." unique_id=1062932967 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.369335, 5.3667936, 0)
+
+[node name="platform15" parent="." unique_id=181882488 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43.55784, 5.3667936, 0)
+
+[node name="platform16" parent="." unique_id=6538381 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.39995, 5.3667936, 0)
+
+[node name="platform17" parent="." unique_id=461796012 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.47966, 1.0193815, 0)
+
+[node name="platform18" parent="." unique_id=2143005176 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.3273, 1.0193815, 0)
+
+[node name="platform19" parent="." unique_id=852848486 instance=ExtResource("4_rkygx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.870193, 1.0193815, 0)
+
+[node name="Saw Blade2" parent="." unique_id=423051216 instance=ExtResource("6_gqpvc")]
+transform = Transform3D(4.499938, 0, -0.023640376, 0, 4.5, 0, 0.023640376, 0, 4.499938, 51.924, -1.128767, 1.1445737)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1794842755]
+environment = SubResource("Environment_rkygx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1244206953]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1951347342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.182625, -0.60687447, -2.361166)
+shape = SubResource("BoxShape3D_gqpvc")
+
+[node name="goal" parent="." unique_id=1548128697 instance=ExtResource("7_rkygx")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 63.81343, -2.5498438, 0)
+
+[node name="goal2" parent="." unique_id=198054825 instance=ExtResource("7_rkygx")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 63.81343, 2.4501562, 0)
+
+[node name="goal3" parent="." unique_id=986828916 instance=ExtResource("7_rkygx")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 63.81343, -7.471959, 0)
+
+[node name="goal4" parent="." unique_id=1787184842 instance=ExtResource("7_rkygx")]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 63.81343, 7.32973, 0)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1391654944]
+stream = ExtResource("8_546p8")
+autoplay = true
+script = ExtResource("8_b33os")

@@ -1,33 +1,41 @@
 [gd_scene format=3 uid="uid://dtrc0xt44si08"]
 
 [ext_resource type="PackedScene" uid="uid://dq6dxa3ojd61q" path="res://Scenes/player.tscn" id="1_ng0s0"]
+[ext_resource type="AudioStream" uid="uid://beilsgektinry" path="res://Sounds/05. Super Mario 64 Main Theme.mp3" id="2_5e78q"]
 [ext_resource type="PackedScene" uid="uid://byminsqnjbirg" path="res://Scenes/long_platform.tscn" id="2_g5cw1"]
 [ext_resource type="Texture2D" uid="uid://cspm410llov04" path="res://Sprites/arrow.png" id="3_76ybr"]
+[ext_resource type="Script" uid="uid://ctm1vlqgld7w1" path="res://Scripts/audio_stream_player.gd" id="3_l4wr6"]
 [ext_resource type="PackedScene" uid="uid://cnk7dpioymi0e" path="res://Scenes/spiky_platform_above.tscn" id="4_s8nj6"]
 [ext_resource type="PackedScene" uid="uid://b6o5oi8h61734" path="res://Scenes/goal.tscn" id="5_vwg62"]
+[ext_resource type="PackedScene" uid="uid://b43b0asuyfudx" path="res://Scenes/spikey_platform_below.tscn" id="6_qf6rc"]
+[ext_resource type="PackedScene" uid="uid://dysyi8k8wi6cv" path="res://Scenes/checkpoint.tscn" id="7_53xsp"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1fhj5"]
 
-[sub_resource type="Sky" id="Sky_t7iv1"]
+[sub_resource type="Sky" id="Sky_l4wr6"]
 sky_material = SubResource("ProceduralSkyMaterial_1fhj5")
 
 [sub_resource type="Environment" id="Environment_16pka"]
 background_mode = 2
-sky = SubResource("Sky_t7iv1")
+sky = SubResource("Sky_l4wr6")
 ambient_light_source = 3
 reflected_light_source = 2
 
 [node name="level_3" type="Node3D" unique_id=1469623433]
 
 [node name="player" parent="." unique_id=90765665 instance=ExtResource("1_ng0s0")]
-transform = Transform3D(0.9913718, 0, 0.1310799, 0, 1, 0, -0.1310799, 0, 0.9913718, -0.019964218, 1.6430051, -0.15143561)
+transform = Transform3D(0.9913718, 0, 0.1310799, 0, 1, 0, -0.1310799, 0, 0.9913718, -0.019964218, 1.6430051, 0.056145906)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=179960071]
 environment = SubResource("Environment_16pka")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1838801801]
+stream = ExtResource("2_5e78q")
+autoplay = true
+script = ExtResource("3_l4wr6")
 
 [node name="long platform" parent="." unique_id=1691418687 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.8503914, 0)
 
 [node name="long platform2" parent="." unique_id=1183801038 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 52.23693, 0)
@@ -47,41 +55,74 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.203033, 52.23693, 0)
 [node name="long platform6" parent="." unique_id=1717213005 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.367247, 27.100494, 0)
 
+[node name="long platform30" parent="." unique_id=368891134 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.20133, 27.100494, 0)
+
+[node name="long platform31" parent="." unique_id=55595238 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.875443, 27.100494, 0)
+
 [node name="long platform7" parent="." unique_id=1006727969 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.547485, 27.100494, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.714355, 27.100494, 0)
 
 [node name="long platform8" parent="." unique_id=849442066 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 55.57421, 27.100494, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.55606, 27.100494, 0)
 
 [node name="long platform9" parent="." unique_id=1295520246 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.0902, 27.100494, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.16797, 27.100494, 0)
 
 [node name="long platform10" parent="." unique_id=663571273 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.96563, 27.100494, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 66.30103, 27.100494, 0)
+
+[node name="long platform32" parent="." unique_id=116486875 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.16295, 27.100494, 0)
+
+[node name="long platform33" parent="." unique_id=453032227 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 75.16295, 27.100494, 0)
+
+[node name="long platform35" parent="." unique_id=58498843 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.64304, 27.100494, 0)
+
+[node name="long platform34" parent="." unique_id=1735110416 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 88.15669, 27.100494, 0)
 
 [node name="long platform11" parent="." unique_id=1483154259 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.96563, 53.95575, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 85.96563, 38.67691, 0)
 
 [node name="long platform14" parent="." unique_id=873200157 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.47755, 78.55382, 0)
 
+[node name="long platform39" parent="." unique_id=1805246222 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.2069, 78.55382, 0)
+
+[node name="long platform38" parent="." unique_id=604307391 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.47755, 47.17753, 0)
+
+[node name="long platform40" parent="." unique_id=1408710076 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 98.47755, 63.76612, 0)
+
 [node name="long platform15" parent="." unique_id=801770771 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 107.65281, 78.55382, 0)
+transform = Transform3D(0.9999987, -0.00041410944, -0.0015277439, 0.00041658245, 0.9999986, 0.0016008173, 0.0015270715, -0.0016014588, 0.9999975, 105.40493, 78.55382, 0)
 
 [node name="long platform16" parent="." unique_id=1445345370 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 116.924995, 78.55382, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 112.97189, 78.55382, 0)
 
 [node name="long platform17" parent="." unique_id=177724943 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 119.90368, 78.55382, 0)
 
 [node name="long platform18" parent="." unique_id=1181007823 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 11)
 
+[node name="long platform36" parent="." unique_id=1968126692 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 3.947441)
+
 [node name="long platform19" parent="." unique_id=1458183056 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 19)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 17.871979)
+
+[node name="long platform37" parent="." unique_id=157199777 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 23.752052)
 
 [node name="long platform20" parent="." unique_id=488782256 instance=ExtResource("2_g5cw1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 28)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 30.209145)
 
 [node name="long platform21" parent="." unique_id=725075293 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 38)
@@ -89,8 +130,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.059, 78.55382, 38)
 [node name="long platform22" parent="." unique_id=383046422 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 127.84673, 24.97593, 37.992237)
 
+[node name="long platform41" parent="." unique_id=1509868454 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 123.14716, 24.97593, 37.992237)
+
 [node name="long platform23" parent="." unique_id=530297151 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 139.09384, 24.97593, 37.992237)
+
+[node name="long platform42" parent="." unique_id=107580408 instance=ExtResource("2_g5cw1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 135.70595, 24.97593, 37.992237)
 
 [node name="long platform24" parent="." unique_id=569630849 instance=ExtResource("2_g5cw1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.09384, 24.97593, 37.992237)
@@ -118,22 +165,31 @@ transform = Transform3D(0.04872492, -0.04921034, 0.99759924, 0.71060294, 0.70359
 texture = ExtResource("3_76ybr")
 
 [node name="Spiky_Platform_Above" parent="." unique_id=1161369589 instance=ExtResource("4_s8nj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.323818, 26.762028, -1.6097088)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 31.323818, 26.762028, 0.97071934)
 
 [node name="Spiky_Platform_Above2" parent="." unique_id=1669056655 instance=ExtResource("4_s8nj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46.936314, 26.762028, -1.6097088)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 44.616196, 26.762028, 0.8519335)
 
 [node name="Spiky_Platform_Above3" parent="." unique_id=1446934498 instance=ExtResource("4_s8nj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.936314, 26.762028, -1.6097088)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 52.64378, 26.762028, 0.75557613)
+
+[node name="Spiky_Platform_Above11" parent="." unique_id=2062988342 instance=ExtResource("4_s8nj6")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 70.29408, 27.33001, 0.9633093)
 
 [node name="Spiky_Platform_Above4" parent="." unique_id=804691810 instance=ExtResource("4_s8nj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77.93631, 26.762028, -1.6097088)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 61.03852, 26.762028, 0.8064852)
 
 [node name="Spiky_Platform_Above5" parent="." unique_id=1621020775 instance=ExtResource("4_s8nj6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.923035, 24.988317, 40.815178)
 
 [node name="Spiky_Platform_Above6" parent="." unique_id=1969278179 instance=ExtResource("4_s8nj6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 126.798386, 24.96248, 33.015)
+
+[node name="Spiky_Platform_Above12" parent="." unique_id=2119596451 instance=ExtResource("4_s8nj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.798386, 24.96248, 33.015)
+
+[node name="Spiky_Platform_Above13" parent="." unique_id=1781125587 instance=ExtResource("4_s8nj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.798386, 24.96248, 41.015)
 
 [node name="Spiky_Platform_Above7" parent="." unique_id=1350605962 instance=ExtResource("4_s8nj6")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 142.59848, 25.662779, 38.869953)
@@ -149,3 +205,9 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 154.
 
 [node name="goal" parent="." unique_id=1548128697 instance=ExtResource("5_vwg62")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 163.95578, 24.959589, 37.93094)
+
+[node name="spikey_platform_below" parent="." unique_id=1602251316 instance=ExtResource("6_qf6rc")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28.484491, 52.43579, 0.8840866)
+
+[node name="checkpoint" parent="." unique_id=1788400402 instance=ExtResource("7_53xsp")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 91.11167, 27.077187, 1.0003805)

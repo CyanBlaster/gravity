@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://btl52ynpkqylq"
+path="res://.godot/imported/Red Like Roses (Red Trailer) (feat. Casey Lee Williams).mp3-62471838107406a21d145ac30317969e.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Red Like Roses (Red Trailer) (feat. Casey Lee Williams).mp3"
+dest_files=["res://.godot/imported/Red Like Roses (Red Trailer) (feat. Casey Lee Williams).mp3-62471838107406a21d145ac30317969e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
