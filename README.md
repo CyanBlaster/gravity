@@ -1,7 +1,7 @@
 #Defying Gravity
 
 
-##And you can't pull me down~! Well, at least until they take away your magic spellbook.
+And you can't pull me down~! Well, at least until they take away your magic spellbook.
 
 A 3D Game about flipping gravity! Have fun, well at least while you can, cause I'm gonna get a ton of copyright strikes for the songs.
 
